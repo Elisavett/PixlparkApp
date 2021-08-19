@@ -104,7 +104,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,14 +114,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ConnectToPixlpark.cs" />
-    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\Shipping.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\DeliveryAddress.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

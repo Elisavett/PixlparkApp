@@ -1,0 +1,12 @@
+﻿@model PixlparkApp.Models.DeliveryAddress
+
+    <div>
+        <p>
+            @Html.DisplayFor(model => model.Country) г. @Html.DisplayFor(model => model.City) @Html.DisplayFor(model => model.AddressLine1)
+        </p>
+        <p>
+            <b>@Html.DisplayNameFor(model => model.FullName)</b>
+            <span>: </span>
+            @Html.DisplayFor(model => model.FullName)
+        </p>
+    </div>

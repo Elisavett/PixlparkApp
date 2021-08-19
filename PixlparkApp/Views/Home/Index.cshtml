@@ -1,7 +1,57 @@
-﻿
+﻿@model IEnumerable<PixlparkApp.Models.Order>
+
 @{
     ViewBag.Title = "Index";
 }
+@Styles.Render("~/Content/css")
+<h2>Список заказов</h2>
 
-<h2>Index</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackingUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipping)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
 
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr >
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TrackingUrl)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Shipping, "Shipping")
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeliveryAddress, "DeliveryAddress")
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TotalPrice)
+    </td>
+</tr>
+    }
+
+</table>
+@Scripts.Render("~/bundles/bootstrap")
